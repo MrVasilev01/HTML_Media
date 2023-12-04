@@ -142,3 +142,31 @@ skipBackward.addEventListener("click", () => mainVideo.currentTime -= 5);
 skipForward.addEventListener("click", () => mainVideo.currentTime += 5);
 videoTimeline.addEventListener("mousedown", () => videoTimeline.addEventListener("mousemove", draggableProgressBar));
 document.addEventListener("mouseup", () => videoTimeline.removeEventListener("mousemove", draggableProgressBar));
+
+// // Dark Mode
+// const checkbox = document.getElementById('checkbox');
+// checkbox.addEventListener('change', () => {
+//     document.body.classList.toggle('dark-theme');
+// });
+
+// // Get references to the sun and moon icons and the checkbox
+// const sunIcon = document.querySelector('.sun');
+// const moonIcon = document.querySelector('.moon');
+
+// // Add an event listener to the checkbox
+// checkbox.addEventListener('change', () => {
+//     // Check if the checkbox is checked
+//     if (checkbox.checked) {
+//         // If it's checked, hide the sun icon and show the moon icon
+//         sunIcon.style.display = 'none';
+//         moonIcon.style.display = 'inline';
+//     } else {
+//         // If it's not checked, show the sun icon and hide the moon icon
+//         sunIcon.style.display = 'inline';
+//         moonIcon.style.display = 'none';
+//     }
+// });
+
+document.getElementById("toggle").addEventListener("click", function(){
+    document.getElementsByTagName('body')[0].classList.toggle("dark-theme");
+});
